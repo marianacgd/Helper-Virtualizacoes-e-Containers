@@ -243,3 +243,46 @@ wsl --set-default-version 2
 
 ### Passo 7 (Instale o docker):
 Tutorial: https://docs.docker.com/docker-for-windows/install/
+
+**Docker**
+
+1. Execute o Container Padrão de testes hello-world docker
+
+- Instale o Docker https://docs.docker.com/get-docker/
+
+- Faça o pull e o run da imagem https://hub.docker.com/_/hello-world
+
+2. Coloque para rodar uma instância do MySQL via Docker Official Image
+
+- Instale o MySQL CLI para interagir com o MySQL uma vez que esteja executando. 
+(https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-install.html)
+
+- Baixar imagem atual mysql
+`docker pull mysql:latest`
+
+- Rodar mysql
+`docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=<password> -p 3306:3306 -d mysql:latest`
+
+- Conecte no MySQL via CLI
+`mysql -u root -p<password> -h 127.0.0.1 -P 3306`
+
+- Crie uma nova base de dados (schema)
+`CREATE DATABASE <nome>;`
+
+- Selecione a database
+`USE <database>;`
+
+- Crie a tabela de users;
+`CREATE TABLE IF NOT EXISTS mytable (nome VARCHAR(255), cidade VARCHAR(255));`
+
+- Para verificar se sua tabela foi criada execute:
+`SHOW TABLES;`
+
+- Para uma query simples validando se os dados foram registrados pelo webserver
+`SELECT * FROM <nome-da-table>`
+
+## **Comandos**
+
+docker run
+
+docker pull

@@ -136,7 +136,7 @@ Containers: são os ambientes de execução do Docker, criados a partir de image
 
 - As imagens Docker facilitam a criação e a execução de aplicativos de forma consistente em diferentes ambientes.
 
-Imagens Docker: Camadas(layers):
+**Imagens Docker: Camadas(layers):**
 
 - Imagens Docker são compostas por camadas, que são partes individuais da imagem.
 
@@ -158,7 +158,7 @@ Imagens Docker: Camadas(layers):
 
 - A reutilização de camadas é especialmente benéfica ao lidar com atualizações frequentes, tornando o processo de construção mais rápido e eficiente.
 
-ENV Vars:
+**ENV Vars:**
 
 - Variáveis de ambiente são valores dinâmicos que podem ser passados para um contêiner durante sua execução.
 
@@ -174,7 +174,7 @@ ENV Vars:
 
 - Acessíveis dentro do contêiner pelo sistema operacional e pelo aplicativo em execução.
 
-Volumes:
+**Volumes:**
 
 - Volumes são um mecanismo para persistir e compartilhar dados entre contêineres e o host.
 
@@ -190,7 +190,7 @@ Volumes:
 
 - Podem ser usados volumes anônimos ou volumes nomeados para melhor organização e gerenciamento.
 
-Networking em Docker:
+**Networking em Docker:**
 
 - O Networking permite que os contêineres compartilhem recursos, como serviços e dados, criando uma arquitetura distribuída.
 
@@ -198,7 +198,7 @@ Networking em Docker:
 
 - A rede "bridge" é a mais comum e cria uma rede interna onde os contêineres podem se comunicar usando seus nomes como hostnames.
 
-Principais recursos de Networking em Docker:
+**Principais recursos de Networking em Docker:**
 
 - Exposição de Portas:
 
@@ -210,7 +210,7 @@ Principais recursos de Networking em Docker:
 
 - Rede Overlay: é usada para conectar contêineres em hosts diferentes, criando um ambiente de cluster.
 
-Gerenciamento Avançado:
+**Gerenciamento Avançado:**
 
 - O Docker oferece opções avançadas de networking, como criar redes personalizadas, definir políticas de segurança e roteamento.
 
@@ -218,6 +218,28 @@ Gerenciamento Avançado:
  - Docker fornece ferramentas para monitorar o tráfego de rede entre contêineres e o host.
 
 
-
-
 ## ⚙️Ambiente Docker
+
+### Vídeo Tutorial Instalação: 
+https://www.youtube.com/watch?v=05YN8F8ajBc
+
+### Tutorial oficial: 
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+
+### Passo 1 (PowerShell Admin): 
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+### Passo 2 (PowerShell Admin):
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+### Passo 3
+REINICIE O COMPUTADOR
+
+### Passo 4 (Download the Linux kernel update package):
+https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+
+### Passo 5 (PowerShell Admin):
+wsl --set-default-version 2
+
+### Passo 7 (Instale o docker):
+Tutorial: https://docs.docker.com/docker-for-windows/install/
